@@ -1,0 +1,4 @@
+Composer não executa apropriadamente
+
+rd /s /q "bootstrap"
+xcopy "vendor/twbs/bootstrap/dist" "bootstrap" /e /h /c /i"

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Gotta Chat - Login</title>
+		<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static/css/style.css" />
+	</head>
+	<body class="min-vh-100">
+		<article class="container min-vh-100 d-flex justify-content-center align-items-center">
+			<form class="form-group text-lg-left p-5 bg-light position-relative" method="post" action="/">
+				<h1><img src="../static/img/splash.png" alt="Logo da Gotta Chat" /></h1>
+				<div class="error">
+					<p>Credenciais<br />incorretas</p>
+				</div>
+				<input class="form-control rounded-0 rounded-top" type="text" placeholder="Usuário" name="username" required />
+				<input class="form-control rounded-0 border-top-0 border-bottom-0" type="password"  name="password" placeholder="Senha" required />
+				<input class="btn bg-dark text-light rounded-0 rounded-bottom w-100" type="submit" />
+			</form>
+		</article>
+		<script src="/vendor/components/jquery/jquery.slim.min.js"></script>
+		<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

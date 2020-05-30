@@ -1,0 +1,21 @@
+{
+	"name": "lino4000/chat-aps",
+	"description": "Chat",
+	"authors": [
+		{
+			"name": "Henrique Lino Pacheco",
+			"email": "lino4000@protonmail.com",
+			"homepage": "https://github.com/lino4000",
+            "role": "Developer"
+		}
+	],
+	"require": {
+		"components/jquery": "dev-master",
+		"twbs/bootstrap": "dev-master"
+	},
+	"scripts": {
+        "post-update-cmd": [
+			
+        ]
+    }
+}

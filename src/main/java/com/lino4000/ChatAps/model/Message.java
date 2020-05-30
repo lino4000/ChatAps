@@ -1,33 +1,38 @@
 package com.lino4000.ChatAps.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
-public class User{
-
+@Table(name = "messages")
+public class Message {
+	
 	@Id @GeneratedValue
 	private Integer id;
-	@Column(unique=true)
-	private String username;
-	private String password;
-	@ManyToOne(fetch = FetchType.EAGER)
-	private Role role;
-	private Boolean isLogged;
-	private Boolean isActive;
+    @Transient
+    private MessageType type;
+    private String content;
+    @ManyToOne
+    private User user;
+    @Transient
+    private String sender;
+
+    public enum MessageType {
+        CHAT,
+        JOIN,
+        LEAVE
+    }
 }
